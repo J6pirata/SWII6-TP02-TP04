@@ -1,0 +1,31 @@
+﻿using System;
+
+@page
+@model BLContainerWeb.Pages.BL.CreateModel
+@{
+    ViewData["Title"] = "Novo BL";
+}
+
+<h1> Novo BL </h1>
+
+<form method = "post">
+    <div class= "form-group">
+        <label > Número BL </ label>
+        <input asp -for= "BL.NumeroBL" class= "form-control"/>
+    </div>
+    <div class= "form-group">
+        <label > Data Emissão </ label>
+        <input asp -for= "BL.DataEmissao" type = "date" class= "form-control"/>
+    </div>
+    <div class= "form-group">
+        <label> Emissor </label>
+        <input asp -for= "BL.Emissor" class= "form-control"/>
+    </div>
+    <button type = "submit" class= "btn btn-primary"> Salvar </button>
+
+</form>
+<div class="form-group">
+    <label>BL Associado</label>
+    <select asp-for="Container.BLId" asp-items="Model.BLs" class="form-control"></select>
+</div>
+

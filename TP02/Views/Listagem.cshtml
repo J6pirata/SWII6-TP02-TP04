@@ -1,0 +1,36 @@
+﻿using System;
+
+@page
+@model BLContainerWeb.Pages.BL.IndexModel
+@{
+    ViewData["Title"] = "Lista de BLs";
+}
+
+<h1>Lista de BLs</h1>
+<a asp-page="./Create" class="btn btn-primary">Novo BL</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Número BL</th>
+            <th>Data Emissão</th>
+            <th>Emissor</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bl in Model.BLs)
+        {
+        <tr>
+            <td>@bl.NumeroBL</td>
+            <td>@bl.DataEmissao.ToShortDateString()</td>
+            <td>@bl.Emissor</td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@bl.BLId">Editar</a> |
+                <a asp-page="./Delete" asp-route-id="@bl.BLId">Excluir</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

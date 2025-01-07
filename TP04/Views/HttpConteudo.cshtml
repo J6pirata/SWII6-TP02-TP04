@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{@inject HttpClient Http
+
+@code {
+    private List<Produto> produtos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        produtos = await Http.GetFromJsonAsync<List<Produto>>("https://localhost:5001/api/produto");
+    }
+}
+}
+

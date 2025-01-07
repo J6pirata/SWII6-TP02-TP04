@@ -1,0 +1,39 @@
+﻿    @page "/produtos"
+@inject HttpClient Http
+
+@using System.Net.Http.Json
+@code{
+  
+<h1>Gerenciar Produtos</h1>
+
+
+<h2>Lista de Produtos</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in produtos)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                <td>@produto.Nome</td>
+                <td>@produto.Preco:C</td>
+                <td>@produto.Descricao</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" @onclick="() => EditarProduto(produto)">Editar</button>
+                    <button class="btn btn-danger btn-sm" @onclick="() => ExcluirProduto(produto.Id)">Excluir</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+

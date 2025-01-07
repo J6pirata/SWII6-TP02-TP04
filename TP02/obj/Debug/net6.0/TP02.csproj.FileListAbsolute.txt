@@ -1,0 +1,7 @@
+C:\Users\Rafaj6\source\repos\TP02\obj\Debug\net6.0\TP02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafaj6\source\repos\TP02\obj\Debug\net6.0\TP02.AssemblyInfoInputs.cache
+C:\Users\Rafaj6\source\repos\TP02\obj\Debug\net6.0\TP02.AssemblyInfo.cs
+C:\Users\Rafaj6\source\repos\TP02\obj\Debug\net6.0\TP02.csproj.CoreCompileInputs.cache
+C:\Users\Rafaj6\source\repos\TP02\obj\Debug\net6.0\TP02.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rafaj6\source\repos\TP02\obj\Debug\net6.0\TP02.RazorAssemblyInfo.cache
+C:\Users\Rafaj6\source\repos\TP02\obj\Debug\net6.0\TP02.RazorAssemblyInfo.cs
